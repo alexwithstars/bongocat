@@ -68,3 +68,8 @@ document.addEventListener('touchend', e => {
   setFrame({ left: false, right: false })
   keysPressed.delete('touch')
 })
+
+window.addEventListener('blur', e => {
+  keysPressed.clear()
+  setFrame({ left: false, right: false })
+})
