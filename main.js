@@ -37,7 +37,7 @@ function setFrame ({ left, right }) {
   else if (right) draw($right)
 }
 
-resize()
+window.addEventListener('load', resize)
 window.addEventListener('resize', resize)
 
 document.addEventListener('keydown', e => {
