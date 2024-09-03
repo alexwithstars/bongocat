@@ -59,9 +59,11 @@ document.addEventListener('keyup', e => {
 })
 
 document.addEventListener('touchstart', e => {
+  e.clientX = e.touches[0].clientX
+  if (e.clientX > canvas.width / 2) swap = true
+  else swap = false
   setFrame({ left: swap, right: !swap })
   keysPressed.add('touch')
-  swap = !swap
 })
 
 document.addEventListener('touchend', e => {
